@@ -87,6 +87,7 @@
     <Compile Include="Commands\ExdCommand.cs" />
     <Compile Include="Commands\ExdHeaderCommand.cs" />
     <Compile Include="Commands\FurnitureExpCommand.cs" />
+    <Compile Include="Commands\JsonCommand.cs" />
     <Compile Include="Commands\LanguageCommand.cs" />
     <Compile Include="Commands\ImageCommand.cs" />
     <Compile Include="Commands\MapCommand.cs" />
