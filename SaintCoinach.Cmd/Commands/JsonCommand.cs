@@ -78,7 +78,7 @@ namespace SaintCoinach.Cmd.Commands {
                     }
 
                     var settings = new Newtonsoft.Json.JsonSerializerSettings() {
-                        Formatting = Newtonsoft.Json.Formatting.Indented,
+                        Formatting = Newtonsoft.Json.Formatting.None,
                         NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
                     };
 
@@ -101,7 +101,7 @@ namespace SaintCoinach.Cmd.Commands {
             // Remove { } from the name
             if (columnName.Contains("{")) columnName = columnName.Replace("{", "").Replace("}", "");
             
-            // Remove any [0], [1]... from the name. eg:   "BossExp[0]" -> "BossExp"
+            // Remove any [0], [1]... from the name. eg:   "BossExp[0]" -> "BossExp"  or   "Unknown[0][5-10]" -> "Unknown"
             System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("\\[(\\d+\\-?)+]");
             var match = regex.Match(columnName);
 
